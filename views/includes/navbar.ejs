@@ -20,6 +20,20 @@
     border-radius: 25px;
     padding: 0.5rem 3rem 0.5rem 3rem;
     font-size: 1rem;
+    background-color: white;
+  }
+
+  .navbar {
+    background-color: white;
+  }
+  .nav-link {
+    background-color: white;
+  }
+
+  .dropdown-wrapper {
+    background-color: white;
+    flex: 1;
+    min-width: 100px;
   }
 </style>
 
@@ -42,32 +56,34 @@
       </div>
       <div class="navbar-nav ms-auto">
         <form
-          class="d-flex"
+          class="d-flex w-100"
           role="search"
           action="/listings/search"
           method="GET"
         >
-          <select
-            id="search-destinations"
-            class="form-select me-2 search-inp"
-            name="query"
-            placeholder="Search destinations"
-          >
-            <option value="">Select Country</option>
-            <option value="Netherlands">Netherlands</option>
-            <option value="India">India</option>
-            <option value="Fiji">Fiji</option>
-            <option value="United Kingdom">United Kingdom</option>
-            <option value="United States">United States</option>
-            <option value="Indonesia">Indonesia</option>
-            <option value="Canada">Canada</option>
-            <option value="Thailand">Thailand</option>
-            <option value="United Arab Emirates">United Arab Emirates</option>
-            <option value="Costa Rica">Costa Rica</option>
-            <option value="Greece">Greece</option>
-            <option value="Japan">Japan</option>
-            <option value="Maldives">Maldives</option>
-          </select>
+          <div class="dropdown-wrapper me-2">
+            <select
+              id="search-destinations"
+              class="form-select me-2 search-inp"
+              name="query"
+              placeholder="Search destinations"
+            >
+              <option value="">Select Country</option>
+              <option value="Netherlands">Netherlands</option>
+              <option value="India">India</option>
+              <option value="Fiji">Fiji</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="United States">United States</option>
+              <option value="Indonesia">Indonesia</option>
+              <option value="Canada">Canada</option>
+              <option value="Thailand">Thailand</option>
+              <option value="United Arab Emirates">United Arab Emirates</option>
+              <option value="Costa Rica">Costa Rica</option>
+              <option value="Greece">Greece</option>
+              <option value="Japan">Japan</option>
+              <option value="Maldives">Maldives</option>
+            </select>
+          </div>
 
           <button class="btn search-btn" type="submit">
             <i class="fa-solid fa-magnifying-glass"></i>Search
